@@ -30,12 +30,6 @@ class DataIngestion:
             df = pd.read_csv('notebook/data/Salary_Data.csv')
             logging.info('Read the dataset as dataframe')
 
-            # Debug: Print dataset info
-            logging.info(f'Dataset shape: {df.shape}')
-            logging.info(f'Dataset columns: {df.columns.tolist()}')
-            logging.info(f'Dataset head:\n{df.head()}')
-            logging.info(f'Dataset info:\n{df.info()}')
-
             # Check for empty dataframe
             if df.empty:
                 raise CustomException("Dataset is empty", sys)
